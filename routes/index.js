@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   if (req.session.user) {
-    res.render('index', { username: req.session.username, msg: req.session.msg, color: req.session.color });
+    res.render('index', { username: req.session.username, msg: req.session.msg, phone: req.session.phone });
   } else {
     req.session.msg = 'Access denied!';
     res.redirect('/login');

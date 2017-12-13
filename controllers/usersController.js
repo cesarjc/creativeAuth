@@ -9,7 +9,7 @@ const hashPW = (pwd) => crypto.createHash('sha256').update(pwd).digest('base64')
 const signup = (req, res) => {
   const user = new User({ username: req.body.username });
   user.set('hashed_password', hashPW(req.body.password));
-  user.set('email', req.body.email);
+  user.set('phone', req.body.phone);
   user.save()
     .then(() => {
       req.session.user = user.id;
@@ -58,7 +58,7 @@ const getUserProfile = (req, res) => {
 const updateUser = (req, res) => {
   User.findOne({ _id: req.session.user }).exec()
     .then((user) => {
-      user.set('email', req.body.email);
+      user.set('phone', req.body.phone);
       user.set('color', req.body.color);
       return user.save();
     })

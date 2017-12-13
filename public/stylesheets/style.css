@@ -6,6 +6,16 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   -webkit-text-size-adjust: none;
+ height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body {
@@ -14,6 +24,7 @@ body {
   margin: 0;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+width: auto;
 }
 
 header {
