@@ -1,11 +1,6 @@
 'use strict';
 
 const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-
-mongoose.connect('mongodb://localhost/messenger', { useMongoClient: true, promiseLibrary: global.Promise })
-  .then(() => console.log('connected'))
-  .catch(console.error);
 
 const Message = mongoose.model('Message', mongoose.Schema({ from: String, message: String, to: String }));
 const create = (messageInfo) => new Message(messageInfo).save();

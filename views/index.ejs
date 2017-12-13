@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comments!</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body ng-app="app">
+  <header>
+    <welcome></welcome>
+    <div class="inputs">
+      <div>
+        <label for="fromNumber">From: </label>
+        <input type="tel" id="fromNumber" placeholder="(XXX) XXX-XXXX">
+      </div>
+      <div>
+        <label for="toNumber">To: </label>
+        <input type="tel" id="toNumber" placeholder="(XXX) XXX-XXXX">
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="getMessages">Get Messages</button>
+      <button id="deleteMessages">Delete All Messages</button>
+    </div>
+    <div id="done"></div>
+  </header>
+  <main id="messages"></main>
+  <footer>
+    <label for="messageToSend">Message: </label>
+    <textarea id="messageToSend" rows="4" cols="50" placeholder="Type your message here..."></textarea>
+    <button id="sendMessage">Send Message</button>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="http://code.angularjs.org/1.5.6/angular.min.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/userService.js"></script>
+  <script src="/javascripts/welcome.js"></script>
+  <script src="/javascripts/messages.js"></script>
+</body>
+
+</html>
